@@ -89,5 +89,35 @@
         
         <h3>Formualrz zapisów</h3>
 
+        <form method="post" action="saveform.jsp" name="forma">
+
+            <div>
+                <label for="imieid">Imię:</label>
+                <input name="imie" type="text" value="" 
+                accesskey="i" tabindex="1" id="imieid"
+                placeholder="np. Paweł" size="30" maxlength="60">
+            </div>
+
+            <div>
+                <label for="nazwiskoid">Nazwisko:</label>
+                <input name="nazwisko" type="text" value="" 
+                accesskey="n" tabindex="2" id="nazwiskoid"
+                placeholder="np. Nowak" size="30" maxlength="60">
+            </div>
+
+            <div>
+                <label for="typid">Szczepionka:</label>
+                <select id="typid" name="typ">
+                    <option disabled selected value="">wybierz</option>
+                    <option value="1">Pfizer</option>
+                    <option value="2">Novavax</option>
+                </select>
+            </div>
+
+
+        </form>
+
+
+
     </body>
 </html>
