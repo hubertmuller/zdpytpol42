@@ -4,7 +4,11 @@ Projekt podstawy HTML/CSS/JAvascript
 
 # Uruchamianie
 
-Kliknij w index.html
+Kliknij w **index.html**
+
+lub wpisz w linie komend:
+
+`iexplore index.html`
 
 # Inne
 
@@ -17,3 +21,8 @@ Hubert Muller
 ## Licencja
 
 Brak
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
