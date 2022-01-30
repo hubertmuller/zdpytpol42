@@ -107,11 +107,23 @@
 
             <div>
                 <label for="typid">Szczepionka:</label>
+                <!-- dodaj atrybut multiple aby wybrac wiecej elementow uzywajac CTRL -->
                 <select id="typid" name="typ">
                     <option disabled selected value="">wybierz</option>
                     <option value="1">Pfizer</option>
                     <option value="2">Novavax</option>
+                    <option value="3">Astra Zeneca</option>
                 </select>
+            </div>
+
+            <div>
+                <fieldset>
+                    <legend>Życzenia:</legend>
+                    <label for="loteriaid">chcę uczestniczyć w loterii szczepionkowej</label>
+                    <input type="checkbox" value="l" name="zyczenia" id="loteriaid">
+                    <label for="certyfikatid">chcę certyfikat</label>
+                    <input type="checkbox" value="c" name="zyczenia" id="certyfikatid">
+                </fieldset>
             </div>
 
 
