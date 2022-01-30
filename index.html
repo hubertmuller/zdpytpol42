@@ -59,7 +59,7 @@
                 font-weight: bold;
             }
 
-            input[type="text"] {
+            input[type="text"], select, textarea, input[type="submit"] {
                 width: 100%;
                 padding: 10px;
                 border: 1px solid #bbbbbb;
@@ -68,6 +68,33 @@
                 margin-bottom: 15px;
             }
 
+            [type="text"]:hover, [type="submit"]:hover, textarea:hover, select:hover {
+                border: 1px solid #882222;
+                background-color: #ffffff;
+            }
+
+            [type="text"]:active {
+                border: 1px dotted red;
+            }
+
+            [type="submit"]:hover {
+                background-color: #882222;
+            }
+
+            legend {
+                padding: 0;
+            }
+
+            fieldset {
+                border: 0;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 15px;
+            }
+
+            div.kontener {
+                margin: 20px;
+            }
 
         </style>
     </head>
@@ -76,167 +103,170 @@
             Poczatek strony
         -->
         <h1>Witaj w formularzu zapisów</h1>
-        <p>
-            Aby zapisać się zaznajom się z poniższymi informacjami i wypełnij formularz.
 
-            <!--img src="img/covid.jpg" width="200" tabindex="1" alt="Cząsteczka wirusa alt" title="Cząsteczka wirusa title"-->
+        <div class="kontener">
+            
+            <p>
+                Aby zapisać się zaznajom się z poniższymi informacjami i wypełnij formularz.
 
-            Reguły zapisów i procedury opisuje dokument <a href="index2.html" tabindex="4" target="_self" title="link do dokumentu z detalami">Zasady szczepień</a>.
-        </p>
-        
-        <h3 class="naglowek">Informacje</h3>
+                <!--img src="img/covid.jpg" width="200" tabindex="1" alt="Cząsteczka wirusa alt" title="Cząsteczka wirusa title"-->
 
-        <p>
-            Przed szczepieniem musisz byc:
-        </p>
-        <ul>
-            <li>wyspany</li>
-            <li>zdrowy</li>
-            <li>trzeźwy</li>
-        </ul>
+                Reguły zapisów i procedury opisuje dokument <a href="index2.html" tabindex="4" target="_self" title="link do dokumentu z detalami">Zasady szczepień</a>.
+            </p>
+            
+            <h3 class="naglowek">Informacje</h3>
 
-        <p>
-            Po szczepieniu musisz:
-        </p>
-        <ol>
-            <li>odczekać 15 minut</li>
-            <li>udać się do domu</li>
-            <li>skontaktować się z FOZ w przypadku NOP</li>
-        </ol>
+            <p>
+                Przed szczepieniem musisz byc:
+            </p>
+            <ul>
+                <li>wyspany</li>
+                <li>zdrowy</li>
+                <li>trzeźwy</li>
+            </ul>
 
-        <table border="1" width="100%">
-            <caption>Lista dostępnych szczepionek</caption>
-            <tr>
-                <th>
-                    nazwa
-                </th>
-                <th>
-                    kraj
-                </th>
-                <th>
-                    cena
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    Pfizer
-                </td>
-                <td rowspan="2">
-                    USA
-                </td>
-                <td>
-                    10
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Novavax
-                </td>
+            <p>
+                Po szczepieniu musisz:
+            </p>
+            <ol>
+                <li>odczekać 15 minut</li>
+                <li>udać się do domu</li>
+                <li>skontaktować się z FOZ w przypadku NOP</li>
+            </ol>
 
-                <!-- tu rozciaga się rowspan z poprzedniego tr -->
+            <table border="1" width="100%">
+                <caption>Lista dostępnych szczepionek</caption>
+                <tr>
+                    <th>
+                        nazwa
+                    </th>
+                    <th>
+                        kraj
+                    </th>
+                    <th>
+                        cena
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Pfizer
+                    </td>
+                    <td rowspan="2">
+                        USA
+                    </td>
+                    <td>
+                        10
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Novavax
+                    </td>
 
-
-                <td>
-                    7
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Astra Zeneca
-                </td>
-                <td>
-                    GB
-                </td>
-                <td>
-                    6
-                </td>
-            </tr>
-        </table>
-        
-        <h3 id="naglowek">Formualrz zapisów</h3>
-
-        <form method="post" action="index2.html" name="forma">
-
-            <input name="ukryty" type="hidden" value="mojawartosc">
-
-            <div>
-                <label for="imieid">Imię:</label>
-                <input name="imie" type="text" value="" 
-                accesskey="i" tabindex="1" id="imieid"
-                placeholder="np. Paweł" size="30" maxlength="60">
-            </div>
-
-            <div>
-                <label for="nazwiskoid">Nazwisko:</label>
-                <input name="nazwisko" type="text" value="" 
-                accesskey="n" tabindex="2" id="nazwiskoid"
-                placeholder="np. Nowak" size="30" maxlength="60">
-            </div>
-            <!-- przyklad pola z haslem
-            <div>
-                <label for="hasloid">Hasło:</label>
-                <input name="haslo" type="password" value="" 
-                accesskey="h" tabindex="3" id="hasloid"
-                placeholder="" size="30" maxlength="60">
-            </div>
-            -->
-
-            <div>
-                <fieldset>
-                    <legend>Płeć:</legend>
-                    <!-- przyklad 2 sekcji po 2 wartosci. W kazdejs ekcji wartosci sei wzajemnie wykluczaja
-                    <label for="kobietaid">kobieta</label>
-                    <input type="radio" value="k" name="plec2" id="kobietaid">
-                    <label for="kobieta2id">kobieta2</label>
-                    <input type="radio" value="k" name="plec2" id="kobieta2id">
-                    <label for="mezczyznaid">mężczyzna</label>
-                    <input type="radio" value="m" name="plec" id="mezczyznaid">
-                    <label for="innaid">inna</label>
-                    <input type="radio" value="i" name="plec" id="innaid">
-                    -->
-                    <label for="kobietaid">kobieta</label>
-                    <input type="radio" value="k" name="plec" id="kobietaid">
-                    <label for="mezczyznaid">mężczyzna</label>
-                    <input type="radio" value="m" name="plec" id="mezczyznaid">
-                </fieldset>
-            </div>
-
-            <div>
-                <label for="typid">Szczepionka:</label>
-                <!-- dodaj atrybut multiple aby wybrac wiecej elementow uzywajac CTRL -->
-                <select id="typid" name="typ">
-                    <option disabled selected value="">wybierz</option>
-                    <option value="1">Pfizer</option>
-                    <option value="2">Novavax</option>
-                    <option value="3">Astra Zeneca</option>
-                </select>
-            </div>
-
-            <div>
-                <fieldset>
-                    <legend>Życzenia:</legend>
-                    <label for="loteriaid">chcę uczestniczyć w loterii szczepionkowej</label>
-                    <input type="checkbox" value="l" name="zyczenia" id="loteriaid">
-                    <label for="certyfikatid">chcę certyfikat</label>
-                    <input type="checkbox" value="c" name="zyczenia" id="certyfikatid">
-                </fieldset>
-            </div>
-
-            <div>
-                <label for="komentarzid">Dodatkowe uwagi:</label>
-                <textarea rows="10" cols="40" name="komentarz">
-Moja uwaga
-                </textarea>
-            </div>
-
-            <div>
-                <input type="submit" value="Zapisz mnie">
-
-            </div>
+                    <!-- tu rozciaga się rowspan z poprzedniego tr -->
 
 
-        </form>
+                    <td>
+                        7
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Astra Zeneca
+                    </td>
+                    <td>
+                        GB
+                    </td>
+                    <td>
+                        6
+                    </td>
+                </tr>
+            </table>
+            
+            <h3 id="naglowek">Formualrz zapisów</h3>
 
+            <form method="post" action="index2.html" name="forma">
+
+                <input name="ukryty" type="hidden" value="mojawartosc">
+
+                <div>
+                    <label for="imieid">Imię:</label>
+                    <input name="imie" type="text" value="" 
+                    accesskey="i" tabindex="1" id="imieid"
+                    placeholder="np. Paweł" size="30" maxlength="60">
+                </div>
+
+                <div>
+                    <label for="nazwiskoid">Nazwisko:</label>
+                    <input name="nazwisko" type="text" value="" 
+                    accesskey="n" tabindex="2" id="nazwiskoid"
+                    placeholder="np. Nowak" size="30" maxlength="60">
+                </div>
+                <!-- przyklad pola z haslem
+                <div>
+                    <label for="hasloid">Hasło:</label>
+                    <input name="haslo" type="password" value="" 
+                    accesskey="h" tabindex="3" id="hasloid"
+                    placeholder="" size="30" maxlength="60">
+                </div>
+                -->
+
+                <div>
+                    <fieldset>
+                        <legend>Płeć:</legend>
+                        <!-- przyklad 2 sekcji po 2 wartosci. W kazdejs ekcji wartosci sei wzajemnie wykluczaja
+                        <label for="kobietaid">kobieta</label>
+                        <input type="radio" value="k" name="plec2" id="kobietaid">
+                        <label for="kobieta2id">kobieta2</label>
+                        <input type="radio" value="k" name="plec2" id="kobieta2id">
+                        <label for="mezczyznaid">mężczyzna</label>
+                        <input type="radio" value="m" name="plec" id="mezczyznaid">
+                        <label for="innaid">inna</label>
+                        <input type="radio" value="i" name="plec" id="innaid">
+                        -->
+                        <label for="kobietaid">kobieta</label>
+                        <input type="radio" value="k" name="plec" id="kobietaid">
+                        <label for="mezczyznaid">mężczyzna</label>
+                        <input type="radio" value="m" name="plec" id="mezczyznaid">
+                    </fieldset>
+                </div>
+
+                <div>
+                    <label for="typid">Szczepionka:</label>
+                    <!-- dodaj atrybut multiple aby wybrac wiecej elementow uzywajac CTRL -->
+                    <select id="typid" name="typ">
+                        <option disabled selected value="">wybierz</option>
+                        <option value="1">Pfizer</option>
+                        <option value="2">Novavax</option>
+                        <option value="3">Astra Zeneca</option>
+                    </select>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend>Życzenia:</legend>
+                        <label for="loteriaid">chcę uczestniczyć w loterii szczepionkowej</label>
+                        <input type="checkbox" value="l" name="zyczenia" id="loteriaid">
+                        <label for="certyfikatid">chcę certyfikat</label>
+                        <input type="checkbox" value="c" name="zyczenia" id="certyfikatid">
+                    </fieldset>
+                </div>
+
+                <div>
+                    <label for="komentarzid">Dodatkowe uwagi:</label>
+                    <textarea rows="10" cols="40" name="komentarz">
+    Moja uwaga
+                    </textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="Zapisz mnie">
+
+                </div>
+
+
+            </form>
+        </div>
 
 
     </body>
