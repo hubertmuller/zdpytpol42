@@ -91,6 +91,8 @@
 
         <form method="post" action="saveform.jsp" name="forma">
 
+            <input name="ukryty" type="hidden" value="mojawartosc">
+            
             <div>
                 <label for="imieid">Imię:</label>
                 <input name="imie" type="text" value="" 
@@ -152,6 +154,18 @@
                     <label for="certyfikatid">chcę certyfikat</label>
                     <input type="checkbox" value="c" name="zyczenia" id="certyfikatid">
                 </fieldset>
+            </div>
+
+            <div>
+                <label for="komentarzid">Dodatkowe uwagi:</label>
+                <textarea rows="10" cols="40" name="komentarz">
+Moja uwaga
+                </textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Zapisz mnie">
+
             </div>
 
 
