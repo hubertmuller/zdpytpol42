@@ -4,6 +4,79 @@
         <title>Strona główna</title>
         <meta charset="UTF-8">
         <!-- base href="/costam/" -->
+        <style>
+            /*
+            #imieid
+            */
+            body [id="imieid"] {
+               color: red; 
+               background-color: blue;
+            }
+
+            /*
+            [class="naglowek"]
+            */
+            .naglowek {
+                /*color: #ff00ff;*/
+                color: rgb(255, 0, 0);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            table {
+                border: 1px solid rgb(0,0,0);
+                border-collapse: collapse;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            h1 {
+                width: 100%;
+                color: white;
+                background-color: red;
+                background-image: url(img/covid.jpg);
+                background-size: 100%;
+                background-position-x: center;
+                background-position-y: top;
+                background-repeat-x: no-repeat;
+                background-repeat-y: no-repeat;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                padding-top: 30px;
+                padding-left: 30px;
+                padding-bottom: 30px;
+                padding-right: 30px;
+                margin-top: 0px;
+                margin-bottom: 60px;
+            }
+
+            th, td, caption {
+                padding: 10px;
+            }
+
+            th {
+                background-color: #cccccc;
+            }
+
+            td {
+                background-color: #eeeeee;
+            }
+
+            caption {
+                background-color: #aa4444;
+                border: 1px solid #000000;
+                border-bottom: none;
+                font-weight: bold;
+            }
+
+
+
+
+        </style>
     </head>
     <body>
         <!--
@@ -18,7 +91,7 @@
             Reguły zapisów i procedury opisuje dokument <a href="index2.html" tabindex="4" target="_self" title="link do dokumentu z detalami">Zasady szczepień</a>.
         </p>
         
-        <h3>Informacje</h3>
+        <h3 class="naglowek">Informacje</h3>
 
         <p>
             Przed szczepieniem musisz byc:
@@ -87,7 +160,7 @@
             </tr>
         </table>
         
-        <h3>Formualrz zapisów</h3>
+        <h3 id="naglowek">Formualrz zapisów</h3>
 
         <form method="post" action="index2.html" name="forma">
 
