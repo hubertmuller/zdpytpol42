@@ -1,3 +1,12 @@
 h3 {
     color: green;
 }
+
+.noerror {
+    display: none;
+}
+
+.blad {
+    color: red;
+    margin-bottom: 20px;
+}
